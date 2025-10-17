@@ -4,8 +4,10 @@ import google.generativeai as genai
 import os
 
 # Configure API keys
-REDDIT_CLIENT_ID = os.getenv("REDDIT_CLIENT_ID") or st.secrets["REDDIT_CLIENT_ID"]
-REDDIT_CLIENT_SECRET = os.getenv("REDDIT_CLIENT_SECRET") or st.secrets["REDDIT_CLIENT_SECRET"]
+REDDIT_CLIENT_ID = st.secrets["reddit"]["client_id"]
+REDDIT_CLIENT_SECRET = st.secrets["reddit"]["client_secret"]
+REDDIT_USER_AGENT = st.secrets["reddit"]["user_agent"]
+
 USER_AGENT = os.getenv("USER_AGENT") or st.secrets["USER_AGENT"]
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY") or st.secrets["GEMINI_API_KEY"]
 
